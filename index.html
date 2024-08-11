@@ -4,18 +4,23 @@
   <title>Weather App</title>
 </head>
 <body>
-  <input type="text" id="city" placeholder="Enter city">
-  <button onclick="getWeather()">Get Weather</button>
-  <div id="weather"></div>
-
+    <input type="text" id="city" placeholder="Enter city">
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="weather"></div>
   <script>
-   function getWeather() {
-  const city = document.getElementById('city').value;
+  function getWeather() {
+  const cityInput = document.getElementById('city');
+  const city = cityInput.value;
+
   fetch(`/api/weather?city=${city}`)
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
     .then(data => {
       const weatherDiv = document.getElementById('weather');
-      // Assuming "main" and "temp" properties exist in the data
       weatherDiv.textContent = `Temperature: ${data.main.temp}°C`;
     })
     .catch(error => {
