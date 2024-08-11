@@ -8,18 +8,18 @@ const port = process.env.PORT || 3000;
 const apiKey = '00b9dc2d3909d3edf8c282c367c9a9d0';
 
 app.get('/weather', async (req, res) => {
-    const city = req.query.city;
+  const city = req.query.city;
 
-    try {
-        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=<span class="math-inline">\{city\}&appid\=</span>{apiKey}&units=metric`);
-        const data = response.data;
-        res.json(data);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: 'Error fetching weather data' });
-    }
+  try {
+    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+    const data = response.data;
+    res.json(data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error fetching weather data' });
+  }
 });
 
 app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
+  console.log(`Server listening on port ${port}`);
 });
