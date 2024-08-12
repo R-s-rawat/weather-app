@@ -10,7 +10,9 @@ const app = express();
 app.get("/", (req, res) => res.send("Express on Vercel rohit "));
 
 app.listen(3000, () => {
-    console.log("Server ready on port.");
+    setTimeout(() => {
+        console.log("Server ready on port.");
+    }, 1000); // Delay of 1 second
 })
 .on('error', (err) => {
     console.error('Error starting server:', err);
