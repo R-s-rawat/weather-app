@@ -24,7 +24,7 @@
       weatherDiv.textContent = `Temperature: ${data.main.temp}°C`;
     })
     .catch(error => {
-      console.log(data);
+      console.log(response);
       console.error('Error fetching weather:', error);
     });
 }
