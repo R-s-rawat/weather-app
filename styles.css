@@ -1,11 +1,56 @@
-*{
-    margin: 0;
-    padding:0;
-}
-.container {
-margin-left: 40%;
-margin-top: 10%;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
+body {
+    font-family: Arial, sans-serif; /* Set a default font */
+    margin: 0; /* Remove default margin from body */
+    padding: 0; /* Remove default padding from body */
   }
+  
+  .container {
+    width: 400px; /* Set a width for the container */
+    margin: 50px auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding for the content */
+    border: 1px solid #ddd; /* Add a thin border */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #eee; /* Set a light background color */
+  }
+  
+  h2 {
+    text-align: center; /* Center headings */
+    margin-bottom: 10px; /* Add some space below headings */
+  }
+  
+  input[type="text"] {
+    width: 100%; /* Make the input field fill the container width */
+    padding: 10px; /* Add some padding for the input field */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 3px; /* Add rounded corners */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  button {
+    width: 100%; /* Make the button fill the container width */
+    padding: 10px; /* Add some padding for the button */
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 3px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  button:hover {
+    background-color: #45A049; /* Darker green on hover */
+  }
+  
+  #weather-info {
+    margin-top: 20px; /* Add some space above weather info */
+  }
+  
+  #city, #temperature, #description {
+    margin-bottom: 5px; /* Add some space between weather details */
+  }
+  
+  #weather-icon {
+    /* You can adjust styles for your custom weather icon here */
+    width: 48px; /* Set width for the icon */
+    height: 48px; /* Set height for the icon */
+  }
+  
