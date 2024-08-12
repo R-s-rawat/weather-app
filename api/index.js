@@ -7,10 +7,10 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => res.send("Express on Vercel rohit 3001"));
+app.get("/", (req, res) => res.send("Express on Vercel rohit "));
 
-app.listen(3001, () => {
-    console.log("Server ready on port 3001.");
+app.listen(3000, () => {
+    console.log("Server ready on port.");
 })
 .on('error', (err) => {
     console.error('Error starting server:', err);
